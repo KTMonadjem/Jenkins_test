@@ -1,3 +1,5 @@
+#!/usr/bin/env groovy
+
 pipeline {
     agent any
 
@@ -5,6 +7,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh 'make clean'
+                sh 'make'
             }
         }
         stage('Test') {
