@@ -7,10 +7,9 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                git url: 'https://github.com/KTMonadjem/Jenkins_test.git'
+                //git url: 'https://github.com/KTMonadjem/Jenkins_test.git'
                 echo pwd()
                 sh 'ls'
-                /bin/bash
                 sh 'make'
             }
         }
