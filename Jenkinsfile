@@ -7,8 +7,9 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'make clean'
-                sh 'make'
+                echo pwd()
+                def dir = pwd() + 'make'
+                sh dir
             }
         }
         stage('Test') {
