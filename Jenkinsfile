@@ -1,4 +1,5 @@
 #!/usr/bin/env groovy
+#!/bin/bash
 
 pipeline {
     agent any
@@ -10,8 +11,7 @@ pipeline {
                 //git url: 'https://github.com/KTMonadjem/Jenkins_test.git'
                 echo pwd()
                 sh 'ls'
-                sh 'gcc -c test.c -o test.o'
-                sh 'gcc test.o -o test'
+                sh 'make'
             }
         }
         stage('Test') {
