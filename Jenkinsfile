@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 pipeline {
     agent any
@@ -9,8 +9,8 @@ pipeline {
                 echo 'Building..'
                 //git url: 'https://github.com/KTMonadjem/Jenkins_test.git'
                 echo pwd()
-                sh 'ls'
-                sh 'make'
+                bash 'ls'
+                bash 'make'
             }
         }
         stage('Test') {
