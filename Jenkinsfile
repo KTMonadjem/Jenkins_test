@@ -10,7 +10,7 @@ pipeline {
                 //git url: 'https://github.com/KTMonadjem/Jenkins_test.git'
                 echo pwd()
                 sh 'ls'
-                sh '-x build.sh'
+                sh './build.sh'
             }
         }
         stage('Test') {
