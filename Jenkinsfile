@@ -10,7 +10,8 @@ pipeline {
                 //git url: 'https://github.com/KTMonadjem/Jenkins_test.git'
                 echo pwd()
                 sh 'ls'
-                sh './build.sh'
+                sh 'gcc -c test.c -o test.o'
+                sh 'gcc test.o -o test'
             }
         }
         stage('Test') {
